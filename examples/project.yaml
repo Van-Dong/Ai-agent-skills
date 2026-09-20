@@ -1,0 +1,21 @@
+# Copy into target project at .ai-investigator/project.yaml
+project:
+  name: payment-service
+  language: java
+  framework: spring-boot
+
+database:
+  type: oracle
+  connectionProfile: oracle-dev
+  defaultSchema: PAYMENT
+  metadataServiceBaseUrl: http://127.0.0.1:8089
+
+investigation:
+  sourceRoots:
+    - src/main/java
+    - src/main/resources
+  outputDirectory: docs/business-investigations
+  reportLanguage: vi
+  traceNestedProcedures: true
+  includeDataImpact: true
+  includeErrorHandling: true
