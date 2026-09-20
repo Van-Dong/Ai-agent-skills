@@ -41,6 +41,13 @@ If the service is unreachable or its contract is
 incompatible, continue investigating available source
 code and record the database investigation limitation.
 
+For contract version `1.0`, read
+`references/metadata-contract-v1.md` before making metadata calls.
+It defines the endpoint names, request parameters, response envelope,
+authentication boundary, and Oracle-specific limitations for this
+skill. Do not substitute an endpoint from memory or from another
+contract version.
+
 Never expose authentication tokens or database credentials
 in generated reports.
 

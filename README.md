@@ -216,6 +216,7 @@ Với nghiệp vụ nhỏ, skill có thể gộp nội dung vào `README.md`; c�
 - `skills/business-investigator/references/investigation-workflow.md`: quy trình điều tra.
 - `skills/business-investigator/references/report-template.md`: mẫu Markdown.
 - `skills/business-investigator/references/db-tool-usage.md`: hướng dẫn gọi Local REST Service.
+- `skills/business-investigator/references/metadata-contract-v1.md`: contract REST v1.0 dùng khi gọi metadata service.
 - `docs/db-metadata-service-contract.md`: API contract chuẩn.
 - `tools/db-metadata-service/README.md`: hướng dẫn service mẫu (nếu dùng).
 

@@ -9,6 +9,7 @@ database:
   connectionProfile: oracle-dev
   defaultSchema: PAYMENT
   metadataServiceBaseUrl: http://127.0.0.1:8089
+  contractVersion: "1.0"
 
 investigation:
   sourceRoots:

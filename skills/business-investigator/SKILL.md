@@ -33,38 +33,50 @@ not merely technical call-chain documentation.
 Use Vietnamese for explanations and preserve original
 technical identifiers.
 
-## 2. Required References
+## 2. Reference Routing
 
-Resolve all reference paths relative to this SKILL.md file,
+Resolve reference paths relative to this SKILL.md file,
 not relative to the current project's working directory.
 
-Required files:
+Read only the references required by the selected investigation
+mode and available evidence:
 
-- references/output-requirements.md
-- references/investigation-workflow.md
-- references/report-template.md
+- `references/investigation-workflow.md` — read the sections
+  relevant to the requested scope and trace stages.
+- `references/db-tool-usage.md` — read when an authorized local
+  DB Metadata Service is configured or available.
+- `references/metadata-contract-v1.md` — read when
+  `database.contractVersion` is `1.0` and the DB Metadata Service
+  must be called.
+- `references/output-requirements.md` — read when the user asks
+  for a report or another written investigation artifact.
+- `references/report-template.md` — read immediately before
+  generating a report, and only for the report sections being
+  produced.
 
-Database integration reference:
+Do not read every reference by default. Do not duplicate reference
+content in this file.
 
-- references/db-tool-usage.md
-
-Before starting an investigation:
-
-1. Read output-requirements.md to understand the deliverables.
-2. Read investigation-workflow.md and follow its execution steps.
-3. Read db-tool-usage.md when an authorized local DB Metadata
-   Service is configured or available for the current project.
-4. Read report-template.md before generating the final report.
-
-These references define the detailed requirements.
-
-Do not duplicate their contents in this file.
-
-If a required reference is missing or inaccessible, identify
-the missing file. Do not claim full compliance with the
-report specification.
+If a reference required for the selected mode is missing or
+inaccessible, identify the missing file and do not claim full
+compliance with that part of the specification.
 
 ## 3. Input & Scope
+
+### Investigation Mode
+
+Choose the least expansive mode that satisfies the request:
+
+- **Analysis-only:** answer in chat and do not create or modify
+  project files. Use this mode when the user asks to understand,
+  explain, or trace behavior without requesting a report.
+- **Report:** create the requested investigation files in the
+  configured output directory. Use this mode only when the user
+  asks for a report, documentation, onboarding artifact, or file
+  output.
+
+If the request is ambiguous, default to Analysis-only and offer to
+generate a report after the investigation is complete.
 
 Accept one or more of the following:
 
@@ -231,7 +243,9 @@ dependencies.
 
 ### Stage 6 — Report Generation
 
-Generate the report using report-template.md.
+Run this stage only in Report mode. Generate the report using the
+relevant sections of report-template.md and the requirements in
+output-requirements.md.
 
 ### Stage 7 — Quality Check
 
